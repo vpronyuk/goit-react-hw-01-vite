@@ -1,6 +1,6 @@
 import css from "./FriendListItem.module.css";
 
-const FriendListItem = ({ avatar, name, isOnline }) => {
+export default function FriendListItem({ avatar, name, isOnline }) {
   return (
     <li className={css["item"]}>
       <span className={isOnline ? css["is-online"] : css["is-offline"]}></span>
@@ -13,6 +13,4 @@ const FriendListItem = ({ avatar, name, isOnline }) => {
       <p className={css["name"]}>{name}</p>
     </li>
   );
-};
-
-export default FriendListItem;
+}
